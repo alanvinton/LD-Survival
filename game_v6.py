@@ -280,7 +280,7 @@ class Player:
       self.choppable = True
       self.closestTree = treeCheck
       self.targetTree = world.trees[treeCheck].rect
-      print(world.trees[treeCheck].rect)
+      # print(world.trees[treeCheck].rect)
 
   def shelterValid(self):
     tempRect = pygame.Rect(self.rect.x - 19, self.rect.y - 19, 50,50)        
@@ -316,7 +316,7 @@ class Player:
           distToAnimal = distance
           closestIndex = i
     if validAnimal:
-      print(closestIndex)
+      # print(closestIndex)
       return closestIndex
     if not validAnimal:
       return -1
@@ -386,14 +386,14 @@ class World:
         self.day = False
       if self.hour > 24: # day change
         self.hour = 1
-        print("Change Day")
+        # print("Change Day")
         self.date += 1
         self.dayselapsed += 1
-        print("Start of Day " + str(self.date))
+        # print("Start of Day " + str(self.date))
         if self.date > 10: # season change
           self.date = 1
           self.season += 1
-          print("Change season")
+          # print("Change season")
           if self.season > 1:
             self.season = 0
     self.timeSinceNoms += 1
@@ -962,7 +962,7 @@ ORANGE = (255,165,0)
 BARHEIGHT = 20
 PLAYERUPDATEINTERVAL = 60
 world = World()
-print(world.trees)
+# print(world.trees)
 player = Player()
 animals = []
 
