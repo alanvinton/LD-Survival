@@ -753,10 +753,10 @@ def draw(screen):
       if animal.hunger > 30:
         pygame.draw.rect(screen,GREEN,animal.rect)
       pygame.draw.rect(screen,WHITE,animal.rect,2)
-      animalHealth = font.render(str(animal.health), True, WHITE)
+      """animalHealth = font.render(str(animal.health), True, WHITE)
       animalHealthRect = animalHealth.get_rect()
       animalHealthRect.topleft = animal.rect.topright
-      screen.blit(animalHealth, animalHealthRect)
+      screen.blit(animalHealth, animalHealthRect)"""
     else:
       pygame.draw.rect(screen,RED,animal.rect)
     
